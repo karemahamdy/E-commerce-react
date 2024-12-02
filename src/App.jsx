@@ -21,7 +21,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="container min-h-screen flex flex-col">
+    <div className="container">
       <Header />
       <main className="flex-grow">
       

@@ -1,17 +1,27 @@
 .homepage-container {
-      max-width: 1200px;  
-      margin: 0 auto;    
-      padding: 16px;
-      box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
 }
-
 .homepage-error {
   color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 1rem;
 }
 
 .homepage-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
   text-align: left;
+  color: var(--text-color-dark);
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .homepage-heading {
+    font-size: 2rem;
+  }
 }

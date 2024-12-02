@@ -7,13 +7,14 @@
   padding: 0;
 }
 :root {
-  --main-background: ;
-  --main-text: ;
-  --seconddary-text: ;
-  --main-color: ;
+  --main-background: #ffffff;
+  --main-text: #333333;
+  --secondary-text: #666666;
+  --main-color: #f5f5f5;
   --secondary-color: #e53637;
+  --border-color: #eaeaea;
+  --transition-speed: 0.3s;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
 }

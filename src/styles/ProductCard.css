@@ -1,24 +1,7 @@
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  border: 2px solid #eee;
-  padding: 1rem;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
 .products-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
   width: 100%;
 }
 
@@ -34,53 +17,92 @@
   }
 }
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1rem;
+  transition:
+    transform var(--transition-speed) ease-in-out,
+    box-shadow var(--transition-speed) ease-in-out;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .product-image {
-  background-color: #eee;
+  background-color: var(--image-placeholder);
   width: 100%;
   height: 200px;
   object-fit: contain;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   border-radius: 4px;
+  transition: transform var(--transition-speed) ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
 }
 
 .product-details {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-details a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color-dark);
 }
 
 .product-title {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color-dark);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-
+  margin-bottom: 0.5rem;
 }
 
 .product-price {
-    font-size: 1rem;
-    font-weight: bold;
-   color: var(--secondary-color) !important;
-
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 0.75rem;
 }
 
 .product-actions {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
+  width: 100%;
 }
 
 .button {
   flex-grow: 1;
-  padding: 4px 8px;
-  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
   border: none;
+  font-weight: 600;
+  transition:
+    background-color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+.button:active {
+  transform: scale(0.98);
 }
 
 .button-primary {
@@ -89,7 +111,13 @@
 }
 
 .button-primary:hover {
-  background-color: rgb(250, 75, 75);
+  background-color: color-mix(in srgb, var(--secondary-color) 90%, white);
+}
+
+.button-outline {
+  background-color: var(--text-color-dark);
+  color: white;
+  text-decoration: none;
 }
 
 .button-outline {
