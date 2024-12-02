@@ -7,6 +7,8 @@
   max-width: 300px;
   margin: 0 auto;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 2px solid #eee;
+  padding: 1rem;
 }
 
 .product-card:hover {

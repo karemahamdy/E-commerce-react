@@ -17,7 +17,7 @@
 
 @media (min-width: 1024px) {
   .product-detail-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -63,33 +63,23 @@
 .product-price {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #1d4ed8;
   margin-bottom: 20px;
 }
 
 .add-to-cart-button {
-  background-color: #1d4ed8;
+  background-color: var(--secondary-color);
   color: white;
   padding: 14px 20px;
   border: none;
   border-radius: 4px;
   font-size: 1.125rem;
   cursor: pointer;
-  width: 100%;
+  width: 30%;
   text-align: center;
   transition: background-color 0.3s ease;
 }
 
 .add-to-cart-button:hover {
-  background-color: #2563eb;
+  background-color: rgb(250, 75, 75);
 }
 
-.add-to-cart-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.add-to-cart-button:focus {
-  outline: 3px solid #1d4ed8;
-  outline-offset: 2px;
-}

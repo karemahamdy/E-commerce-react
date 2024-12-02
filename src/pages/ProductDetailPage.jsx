@@ -36,9 +36,10 @@ function ProductDetailPage() {
           <h1 className="product-title">{product.title}</h1>
           <p className="product-description">{product.description}</p>
           <div className="product-price">${product.price.toFixed(2)}</div>
-          <button onClick={handleAddToCart} className="add-to-cart-button">
-            Add to Cart
-          </button>
+        <button onClick={handleAddToCart} className="add-to-cart-button">
+          Add to Cart
+        </button>
+        
         </div>
       </div>
     </div>

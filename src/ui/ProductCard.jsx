@@ -28,11 +28,11 @@ function ProductCard({ product }) {
         <p className="product-price">${product.price.toFixed(2)}</p>
       </div>
       <div className="product-actions">
-        <button className="button">
+      
         <Link to={`/product/${product.id}`} className="button button-outline">
           View Details
         </Link>
-        </button>
+      
         <button onClick={handleAddToCart} className="button button-primary">
           Add to Cart
         </button>
