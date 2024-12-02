@@ -1,12 +1,11 @@
-
 .cart-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 16px;
   margin-bottom: 3rem;
-    margin-top: 1rem;
-    border: 1px solid #eee;
-    border-radius: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #eee;
+  border-radius: 1rem;
 }
 
 .cart-heading {
@@ -28,10 +27,12 @@
 .cart-content {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .cart-items {
   flex: 2;
+  min-width: 300px;
 }
 
 .cart-summary {
@@ -39,6 +40,7 @@
   background: #f9f9f9;
   padding: 16px;
   border-radius: 8px;
+  min-width: 300px;
 }
 
 /* Cart Item */
@@ -132,4 +134,105 @@
   background: #3182ce;
   color: #fff;
   width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cart-content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cart-items {
+    flex: none;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .cart-summary {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0;
+  }
+
+  .cart-item-image {
+    width: 100%;
+    max-width: 100px;
+    margin-bottom: 12px;
+  }
+
+  .cart-item-details {
+    width: 100%;
+  }
+
+  .cart-summary-heading {
+    font-size: 1.25rem;
+  }
+
+  .cart-item-title {
+    font-size: 1rem;
+  }
+
+  .cart-summary-item,
+  .cart-summary-total {
+    font-size: 0.875rem;
+  }
+
+  .cart-summary-content {
+    font-size: 0.875rem;
+  }
+
+  .cart-heading {
+    font-size: 1.75rem;
+  }
+
+  .cart-empty-heading {
+    font-size: 1.25rem;
+  }
+
+  .cart-empty-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-items {
+    padding: 4px;
+  }
+
+  .cart-summary {
+    padding: 12px;
+  }
+
+  .cart-item-title {
+    font-size: 0.95rem;
+  }
+
+  .cart-summary-heading {
+    font-size: 1rem;
+  }
+
+  .cart-summary-item,
+  .cart-summary-total {
+    font-size: 0.75rem;
+  }
+
+  .cart-item-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-item-details {
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    padding: 8px 12px;
+  }
 }
