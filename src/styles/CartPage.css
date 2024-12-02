@@ -1,11 +1,14 @@
-/* Container */
+
 .cart-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 10px;
+  margin-bottom: 3rem;
+    margin-top: 1rem;
+    border: 1px solid #eee;
+    border-radius: 1rem;
 }
 
-/* Headings */
 .cart-heading {
   font-size: 2rem;
   font-weight: bold;
@@ -121,7 +124,7 @@
 }
 
 .btn-danger {
-  background: #e53e3e;
+  background: var(--secondary-color);
   color: #fff;
 }
 

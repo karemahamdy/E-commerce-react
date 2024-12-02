@@ -11,11 +11,11 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-// Slices
+
 import productReducer from './productSlice';
 import cartReducer from './cartSlice';
 
-// Persist Configuration
+
 const cartPersistConfig = {
   key: 'cart',
   storage,

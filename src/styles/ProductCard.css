@@ -1,56 +1,79 @@
-/* Product Card Container */
+
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
 }
 
-/* Product Image */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .product-image {
+  background-color: #eee;
   width: 100%;
   height: 200px;
   object-fit: contain;
   margin-bottom: 16px;
+  border-radius: 4px;
 }
 
-/* Product Details */
 .product-details {
   flex-grow: 1;
 }
 
+.product-details a {
+  text-decoration: none;
+  color: black;
+}
+
 .product-title {
-  font-size: 1.125rem;
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 8px;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
+
 }
 
 .product-price {
-  color: #555;
-  margin-bottom: 16px;
-  font-size: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+   color: var(--secondary-color) !important;
+
 }
 
-/* Product Actions */
 .product-actions {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .button {
   flex-grow: 1;
-  padding: 8px 16px;
+  padding: 4px 8px;
   font-size: 1rem;
   border-radius: 4px;
   text-align: center;
@@ -59,18 +82,20 @@
 }
 
 .button-primary {
-  background-color: #1d4ed8;
+  background-color: var(--secondary-color);
   color: white;
 }
 
 .button-primary:hover {
-  background-color: #2563eb;
+  background-color: rgb(250, 75, 75);
 }
 
 .button-outline {
   background-color: transparent;
   color: #1d4ed8;
-  border: 1px solid #1d4ed8;
+}
+.button-outline a {
+  text-decoration: none;
 }
 
 .button-outline:hover {

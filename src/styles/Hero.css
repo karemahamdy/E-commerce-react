@@ -9,7 +9,6 @@
   padding: 3rem 4rem;
   height: 100vh;
   gap: 2rem;
-  /* Adds spacing between content and image */
 }
 
 .hero-content {
@@ -65,7 +64,7 @@
   border-radius: 10px;
 }
 
-/* Media query for responsiveness */
+
 @media (max-width: 1024px) {
   .hero {
     padding: 2rem;
@@ -86,7 +85,6 @@
     flex-direction: column;
     text-align: center;
     height: auto;
-    /* Adjust height for smaller screens */
     padding: 2rem 1.5rem;
   }
 

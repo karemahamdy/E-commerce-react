@@ -1,7 +1,7 @@
-
 import { useSelector } from 'react-redux';
 import ProductCard from '../components/ProductCard';
 import '../styles/HomePage.css';
+
 
 function HomePage() {
   const { items: products, loading, error } = useSelector((state) => state.products);
@@ -20,6 +20,7 @@ function HomePage() {
 
   return (
     <div className="homepage-container">
+    
       <h1 className="homepage-heading">Our Products</h1>
       <div className="products-grid">
         {products.map((product) => (

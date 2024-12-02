@@ -9,11 +9,8 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-
         <Logo />
-
         <Navbar />
-
         <Cart />
       </div>
     </header>

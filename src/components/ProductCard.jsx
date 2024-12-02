@@ -12,6 +12,7 @@ function ProductCard({ product }) {
 
   return (
     <div className="product-card">
+      
       <Link to={`/product/${product.id}`}>
         <img
           src={product.image}
@@ -19,6 +20,7 @@ function ProductCard({ product }) {
           className="product-image"
         />
       </Link>
+      
       <div className="product-details">
         <Link to={`/product/${product.id}`}>
           <h3 className="product-title">{product.title}</h3>
@@ -26,9 +28,11 @@ function ProductCard({ product }) {
         <p className="product-price">${product.price.toFixed(2)}</p>
       </div>
       <div className="product-actions">
+        <button className="button">
         <Link to={`/product/${product.id}`} className="button button-outline">
           View Details
         </Link>
+        </button>
         <button onClick={handleAddToCart} className="button button-primary">
           Add to Cart
         </button>

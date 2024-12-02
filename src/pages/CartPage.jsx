@@ -34,7 +34,7 @@ function CartPage() {
 
   return (
     <div className="cart-container">
-      <h1 className="cart-heading">Your Cart</h1>
+      {/* <h1 className="cart-heading">Your Cart</h1> */}
       <div className="cart-content">
         <div className="cart-items">
           {cartItems.map((item) => (
@@ -69,6 +69,7 @@ function CartPage() {
             </div>
           ))}
         </div>
+        
         <div className="cart-summary">
           <h2 className="cart-summary-heading">Order Summary</h2>
           <div className="cart-summary-content">
