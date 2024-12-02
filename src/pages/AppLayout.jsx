@@ -7,7 +7,7 @@ export default function AppLayout() {
     <div>
       <Header />
       
-      <main className="mx-auto max-w-3xl">
+      <main className="">
         <Outlet/>
       </main>
        <Footer />

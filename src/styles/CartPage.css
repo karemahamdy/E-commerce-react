@@ -1,32 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Color Palette Variables */
+:root {
+  /* Background Colors */
+  --main-background: #ffffff;
+  --secondary-background: #f9f9f9;
+  --border-background: #f5f5f5;
+
+  /* Text Colors */
+  --main-text: #333333;
+  --secondary-text: #666666;
+  --muted-text: #999999;
+
+  /* Accent Colors */
+  --primary-color: #3182ce;
+  --secondary-color: #e53637;
+
+  /* State Colors */
+  --border-color: #eaeaea;
+  --disabled-color: #cccccc;
+
+  /* Typography */
+  --font-family: 'Poppins', sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-normal: 1rem;
+  --font-size-medium: 1.1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  /* Transitions */
+  --transition-speed: 0.3s;
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 1rem;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-family);
+  color: var(--main-text);
+  background-color: var(--main-background);
+}
+
+/* Cart Container */
 .cart-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
-  border: 1px solid #eee;
-  border-radius: 1rem;
+  margin: var(--spacing-md) auto;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
 }
 
 .cart-heading {
-  font-size: 2rem;
+  font-size: var(--font-size-xlarge);
   font-weight: bold;
-  margin-bottom: 24px;
+  margin-bottom: var(--spacing-lg);
 }
 
 .cart-empty-heading {
-  font-size: 1.5rem;
+  font-size: var(--font-size-large);
   font-weight: bold;
 }
 
 .cart-empty-text {
-  color: gray;
+  color: var(--muted-text);
 }
 
 /* Layout */
 .cart-content {
   display: flex;
-  gap: 16px;
+  gap: var(--spacing-md);
   flex-wrap: wrap;
 }
 
@@ -37,9 +95,9 @@
 
 .cart-summary {
   flex: 1;
-  background: #f9f9f9;
-  padding: 16px;
-  border-radius: 8px;
+  background: var(--secondary-background);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
   min-width: 300px;
 }
 
@@ -47,15 +105,15 @@
 .cart-item {
   display: flex;
   align-items: center;
-  padding: 16px 0;
-  border-bottom: 1px solid #e0e0e0;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .cart-item-image {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  margin-right: 16px;
+  margin-right: var(--spacing-md);
 }
 
 .cart-item-details {
@@ -63,65 +121,66 @@
 }
 
 .cart-item-title {
-  font-size: 1.1rem;
+  font-size: var(--font-size-medium);
   font-weight: bold;
 }
 
 .cart-item-price {
-  color: gray;
+  color: var(--secondary-text);
 }
 
 .cart-item-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-xs);
 }
 
 .cart-item-quantity {
-  margin: 0 8px;
+  margin: 0 var(--spacing-xs);
 }
 
 /* Summary */
 .cart-summary-heading {
-  font-size: 1.5rem;
+  font-size: var(--font-size-large);
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-md);
 }
 
 .cart-summary-content {
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-md);
 }
 
 .cart-summary-item,
 .cart-summary-total {
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: var(--spacing-xs) 0;
 }
 
 .cart-summary-total {
   font-weight: bold;
-  border-top: 1px solid #e0e0e0;
-  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-md);
 }
 
 /* Buttons */
 .btn {
-  padding: 8px 16px;
-  font-size: 1rem;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-normal);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
 }
 
 .btn-outline {
   background: none;
-  border: 1px solid #ccc;
+  border: 1px solid var(--disabled-color);
 }
 
 .btn-outline:disabled {
-  color: #ccc;
-  border-color: #ccc;
+  color: var(--disabled-color);
+  border-color: var(--disabled-color);
   cursor: not-allowed;
 }
 
@@ -131,7 +190,7 @@
 }
 
 .btn-primary {
-  background: #3182ce;
+  background: var(--primary-color);
   color: #fff;
   width: 100%;
 }
@@ -146,24 +205,24 @@
   .cart-items {
     flex: none;
     width: 100%;
-    padding: 8px;
+    padding: var(--spacing-xs);
   }
 
   .cart-summary {
     width: 100%;
-    margin-top: 16px;
+    margin-top: var(--spacing-md);
   }
 
   .cart-item {
     flex-direction: column;
     align-items: flex-start;
-    padding: 12px 0;
+    padding: var(--spacing-sm) 0;
   }
 
   .cart-item-image {
     width: 100%;
     max-width: 100px;
-    margin-bottom: 12px;
+    margin-bottom: var(--spacing-sm);
   }
 
   .cart-item-details {
@@ -171,32 +230,32 @@
   }
 
   .cart-summary-heading {
-    font-size: 1.25rem;
+    font-size: var(--font-size-medium);
   }
 
   .cart-item-title {
-    font-size: 1rem;
+    font-size: var(--font-size-normal);
   }
 
   .cart-summary-item,
   .cart-summary-total {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
   }
 
   .cart-summary-content {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
   }
 
   .cart-heading {
-    font-size: 1.75rem;
+    font-size: var(--font-size-large);
   }
 
   .cart-empty-heading {
-    font-size: 1.25rem;
+    font-size: var(--font-size-medium);
   }
 
   .cart-empty-text {
-    font-size: 1rem;
+    font-size: var(--font-size-normal);
   }
 }
 
@@ -206,20 +265,20 @@
   }
 
   .cart-summary {
-    padding: 12px;
+    padding: var(--spacing-sm);
   }
 
   .cart-item-title {
-    font-size: 0.95rem;
+    font-size: calc(var(--font-size-normal) * 0.95);
   }
 
   .cart-summary-heading {
-    font-size: 1rem;
+    font-size: var(--font-size-normal);
   }
 
   .cart-summary-item,
   .cart-summary-total {
-    font-size: 0.75rem;
+    font-size: calc(var(--font-size-small) * 0.85);
   }
 
   .cart-item-image {
@@ -232,7 +291,7 @@
   }
 
   .btn {
-    font-size: 0.875rem;
-    padding: 8px 12px;
+    font-size: var(--font-size-small);
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 }
