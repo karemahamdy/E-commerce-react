@@ -93,13 +93,7 @@
 }
 
 .button-outline {
-  background-color: transparent;
-  color: #1d4ed8;
-}
-.button-outline a {
+  background-color: black ;
+  color: white;
   text-decoration: none;
-}
-
-.button-outline:hover {
-  background-color: #f0f4ff;
 }
