@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import ProductCard from '../ui/ProductCard';
 import '../styles/HomePage.css';
+import Loader from '../ui/Loader';
 
 
 export default function ProductPage() {
@@ -8,7 +9,7 @@ export default function ProductPage() {
   const { items: products, loading, error } = useSelector((state) => state.products);
 
   if (loading) {
-    return <div className="homepage-container">Loading products...</div>;
+    return <Loader/>
   }
 
   if (error) {

@@ -1,6 +1,5 @@
 
 import Logo from '../components/Logo';
-import Navbar from '../components/Nav';
 import '../styles/Header.scss';
 import Cart from '../ui/Cart';
 
@@ -10,7 +9,6 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <Logo />
-        <Navbar />
         <Cart />
       </div>
     </header>
