@@ -127,3 +127,133 @@
 // }
 
 
+
+$transition-speed: 0.3s;
+$border-light: #eee;
+$image-placeholder: #f4f4f4;
+$text-color-dark: #333;
+$secondary-color: #3182ce;
+
+@mixin grid-layout($columns, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin flex-center($direction: column, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin hover-effect($scale: 1.05, $shadow: 0 4px 8px rgba(0, 0, 0, 0.1)) {
+  transition: transform $transition-speed ease, box-shadow $transition-speed ease;
+  &:hover {
+    transform: scale($scale);
+    box-shadow: $shadow;
+  }
+}
+
+
+.products-grid {
+  @include grid-layout(1);
+
+  @media (min-width: 768px) {
+    @include grid-layout(2);
+  }
+
+  @media (min-width: 1024px) {
+    @include grid-layout(3);
+  }
+}
+
+.product-card {
+  @include flex-center(column, 1rem);
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid $border-light;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  @include hover-effect(1, 0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.product-image {
+  background-color: $image-placeholder;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  transition: transform $transition-speed ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.product-details {
+  flex-grow: 1;
+  @include flex-center(column);
+}
+
+.product-details a {
+  text-decoration: none;
+  color: $text-color-dark;
+}
+
+.product-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $text-color-dark;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: $secondary-color;
+  margin-bottom: 0.75rem;
+}
+
+
+.product-actions {
+  @include flex-center(row, 0.625rem);
+  width: 100%;
+}
+
+.button {
+  flex-grow: 1;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  @include hover-effect;
+
+  &-primary {
+    background-color: $secondary-color;
+    color: white;
+
+    &:hover {
+      background-color: mix($secondary-color, white, 10%);
+    }
+  }
+
+  &-outline {
+    background-color: $text-color-dark;
+    color: white;
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

@@ -34,8 +34,8 @@ body {
 
 @import './Header.scss';
 @import './Hero.scss';
+@import './ProductCard.scss';
 @import './ProductDetailPage.scss';
-// @import 'product-details';
 @import './CartPage.scss';
 @import './Footer.scss';
 
@@ -50,7 +50,7 @@ body {
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

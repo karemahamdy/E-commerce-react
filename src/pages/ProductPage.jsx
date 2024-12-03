@@ -3,7 +3,6 @@ import ProductCard from '../ui/ProductCard';
 import '../styles/HomePage.css';
 
 
-
 export default function ProductPage() {
 
   const { items: products, loading, error } = useSelector((state) => state.products);

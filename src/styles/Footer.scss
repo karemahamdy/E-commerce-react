@@ -130,7 +130,7 @@ $footer-light-text: #c4c2c2;
     margin-top: 2rem;
     font-size: 0.8rem;
     border-top: 1px solid $footer-border-color;
-    padding-top: 1rem;
+    padding: 1rem;
 
     p {
       margin: 0;
@@ -138,7 +138,6 @@ $footer-light-text: #c4c2c2;
   }
 }
 
-// Mixin for responsiveness
 @mixin respond-to($breakpoint) {
   @if $breakpoint == mobile {
     @media (max-width: 768px) {
