@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import "../styles/Hero.css";
+import "../styles/Hero.scss";
 
 
 export default function Hero() {

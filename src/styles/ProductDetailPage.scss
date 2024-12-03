@@ -1,0 +1,324 @@
+// .product-detail-container {
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 1rem;
+// }
+
+// .product-detail-grid {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   gap: 1rem;
+//   background-color: var(--main-background);
+//   border: 1px solid var(--border-color);
+//   border-radius: 8px;
+//   overflow: hidden;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+//   transition: box-shadow var(--transition-speed) ease;
+// }
+
+// .product-detail-grid:hover {
+//   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
+// }
+
+// @media screen and (min-width: 768px) {
+//   .product-detail-grid {
+//     flex-direction: row;
+//     align-items: stretch;
+//   }
+// }
+
+// .product-image-container {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1rem;
+//   background-color: var(--main-color);
+//   transition: background-color var(--transition-speed) ease;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .product-image-container {
+//     width: 50%;
+//     padding: 2rem;
+//   }
+// }
+
+// .product-image {
+//   max-width: 100%;
+//   max-height: 400px;
+//   object-fit: contain;
+//   transition: transform var(--transition-speed) ease;
+//   will-change: transform;
+// }
+
+// .product-image:hover {
+//   transform: scale(1.05);
+// }
+
+// .product-info {
+//   width: 100%;
+//   padding: 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   background-color: var(--main-background);
+// }
+
+// @media screen and (min-width: 768px) {
+//   .product-info {
+//     width: 50%;
+//     padding: 2rem;
+//   }
+// }
+
+// .product-title {
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   margin-bottom: 1rem;
+//   color: var(--main-text);
+//   letter-spacing: -0.02em;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .product-title {
+//     font-size: 2rem;
+//   }
+// }
+
+// .product-description {
+//   font-size: 0.9rem;
+//   line-height: 1.6;
+//   color: var(--secondary-text);
+//   margin-bottom: 1rem;
+//   opacity: 0.9;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .product-description {
+//     font-size: 1rem;
+//   }
+// }
+
+// .product-price {
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   margin-bottom: 1rem;
+//   color: var(--main-text);
+//   letter-spacing: -0.02em;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .product-price {
+//     font-size: 1.75rem;
+//   }
+// }
+
+// .add-to-cart-button {
+//   width: 100%;
+//   padding: 0.75rem 1rem;
+//   background-color: var(--secondary-color);
+//   color: white;
+//   border: none;
+//   border-radius: 4px;
+//   font-size: 1rem;
+//   font-weight: 600;
+//   cursor: pointer;
+//   transition:
+//     background-color var(--transition-speed) ease,
+//     transform var(--transition-speed) ease;
+//   will-change: transform, background-color;
+// }
+
+// .add-to-cart-button:hover {
+//   background-color: color-mix(in srgb, var(--secondary-color) 90%, white);
+//   transform: translateY(-2px);
+// }
+
+// @media screen and (min-width: 768px) {
+//   .add-to-cart-button {
+//     padding: 1rem 1.25rem;
+//     font-size: 1.125rem;
+//   }
+// }
+
+// /* Small mobile devices */
+// @media screen and (max-width: 375px) {
+//   .product-title {
+//     font-size: 1.25rem;
+//   }
+
+//   .product-description {
+//     font-size: 0.85rem;
+//   }
+
+//   .product-price {
+//     font-size: 1.25rem;
+//   }
+// }
+
+// Variables for customization
+$main-background: var(--main-background);
+$border-color: var(--border-color);
+$main-color: var(--main-color);
+$main-text: var(--main-text);
+$secondary-text: var(--secondary-text);
+$secondary-color: var(--secondary-color);
+$transition-speed: var(--transition-speed);
+
+// Mixin for media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == small-mobile {
+    @media screen and (max-width: 375px) {
+      @content;
+    }
+  }
+}
+
+.product-detail-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.product-detail-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  background-color: $main-background;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow $transition-speed ease;
+
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  @include respond-to(tablet) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.product-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: $main-color;
+  transition: background-color $transition-speed ease;
+
+  @include respond-to(tablet) {
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  transition: transform $transition-speed ease;
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.product-info {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $main-background;
+
+  @include respond-to(tablet) {
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: $main-text;
+  letter-spacing: -0.02em;
+
+  @include respond-to(tablet) {
+    font-size: 2rem;
+  }
+
+  @include respond-to(small-mobile) {
+    font-size: 1.25rem;
+  }
+}
+
+.product-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: $secondary-text;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+
+  @include respond-to(tablet) {
+    font-size: 1rem;
+  }
+
+  @include respond-to(small-mobile) {
+    font-size: 0.85rem;
+  }
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: $main-text;
+  letter-spacing: -0.02em;
+
+  @include respond-to(tablet) {
+    font-size: 1.75rem;
+  }
+
+  @include respond-to(small-mobile) {
+    font-size: 1.25rem;
+  }
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color $transition-speed ease, transform $transition-speed ease;
+  will-change: transform, background-color;
+
+  &:hover {
+    background-color: color-mix(in srgb, $secondary-color 90%, white);
+    transform: translateY(-2px);
+  }
+
+  @include respond-to(tablet) {
+    padding: 1rem 1.25rem;
+    font-size: 1.125rem;
+  }
+}

@@ -33,11 +33,10 @@ body {
 }
 
 @import './Header.scss';
-// @import 'hero';
-// @import 'home';
-// @import 'product-card';
+@import './Hero.scss';
+@import './ProductDetailPage.scss';
 // @import 'product-details';
-// @import 'cart-page';
+@import './CartPage.scss';
 @import './Footer.scss';
 
 .products-grid {

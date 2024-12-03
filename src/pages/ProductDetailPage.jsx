@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductById } from '../redux/productSlice';
 import { addToCart } from '../redux/cartSlice';
-import '../styles/ProductDetailPage.css'; 
+import '../styles/ProductDetailPage.scss'; 
 
 function ProductDetailPage() {
   const { id } = useParams();

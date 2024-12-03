@@ -17,11 +17,9 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: box-shadow var(--transition-speed) ease;
 }
-
 .product-detail-grid:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
 }
-
 @media screen and (min-width: 768px) {
   .product-detail-grid {
     flex-direction: row;
@@ -38,7 +36,6 @@
   background-color: var(--main-color);
   transition: background-color var(--transition-speed) ease;
 }
-
 @media screen and (min-width: 768px) {
   .product-image-container {
     width: 50%;
@@ -49,11 +46,11 @@
 .product-image {
   max-width: 100%;
   max-height: 400px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   transition: transform var(--transition-speed) ease;
   will-change: transform;
 }
-
 .product-image:hover {
   transform: scale(1.05);
 }
@@ -66,7 +63,6 @@
   justify-content: center;
   background-color: var(--main-background);
 }
-
 @media screen and (min-width: 768px) {
   .product-info {
     width: 50%;
@@ -81,10 +77,14 @@
   color: var(--main-text);
   letter-spacing: -0.02em;
 }
-
 @media screen and (min-width: 768px) {
   .product-title {
     font-size: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .product-title {
+    font-size: 1.25rem;
   }
 }
 
@@ -95,10 +95,14 @@
   margin-bottom: 1rem;
   opacity: 0.9;
 }
-
 @media screen and (min-width: 768px) {
   .product-description {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .product-description {
+    font-size: 0.85rem;
   }
 }
 
@@ -109,10 +113,14 @@
   color: var(--main-text);
   letter-spacing: -0.02em;
 }
-
 @media screen and (min-width: 768px) {
   .product-price {
     font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .product-price {
+    font-size: 1.25rem;
   }
 }
 
@@ -126,35 +134,16 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition:
-    background-color var(--transition-speed) ease,
-    transform var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
   will-change: transform, background-color;
 }
-
 .add-to-cart-button:hover {
   background-color: color-mix(in srgb, var(--secondary-color) 90%, white);
   transform: translateY(-2px);
 }
-
 @media screen and (min-width: 768px) {
   .add-to-cart-button {
     padding: 1rem 1.25rem;
     font-size: 1.125rem;
   }
-}
-
-/* Small mobile devices */
-@media screen and (max-width: 375px) {
-  .product-title {
-    font-size: 1.25rem;
-  }
-
-  .product-description {
-    font-size: 0.85rem;
-  }
-
-  .product-price {
-    font-size: 1.25rem;
-  }
-}
+}/*# sourceMappingURL=ProductDetailPage.css.map */

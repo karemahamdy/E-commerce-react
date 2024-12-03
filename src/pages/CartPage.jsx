@@ -7,7 +7,7 @@ import {
 
 
 import CartEmptyMessage from '../ui/CartEmptyMessage';
-import '../styles/CartPage.css';
+import '../styles/CartPage.scss';
 import CartItem from '../ui/CartItem';
 import CartSummary from '../ui/CartSummary';
 
