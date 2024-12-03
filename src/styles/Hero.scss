@@ -1,135 +1,10 @@
-// .hero {
-//   background-image: url("src/assets/images/hero.jpg.webp");
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   padding: 3rem 4rem;
-//   height: 100vh;
-//   gap: 2rem;
-// }
-
-// .hero-content {
-//   max-width: 50%;
-// }
-
-// .hero-label {
-//   font-size: 1rem;
-//   font-weight: bold;
-//   color: #e76161;
-//   text-transform: uppercase;
-//   margin-bottom: 1rem;
-//   display: inline-block;
-// }
-
-// .hero-title {
-//   font-size: 3rem;
-//   font-weight: bold;
-//   color: #000;
-//   line-height: 1.2;
-//   margin-bottom: 1rem;
-// }
-
-// .hero-description {
-//   font-size: 1rem;
-//   color: #444;
-//   line-height: 1.6;
-//   margin-bottom: 2rem;
-// }
-
-// .hero-button {
-//   background-color: #000;
-//   color: #fff;
-//   padding: 0.75rem 2rem;
-//   border: none;
-//   cursor: pointer;
-//   font-size: 1rem;
-//   transition: background-color 0.3s ease-in-out;
-// }
-
-// .hero-button:hover {
-//   background-color: #444;
-// }
-
-// .hero-image {
-//   max-width: 50%;
-//   text-align: center;
-// }
-
-// .hero-image img {
-//   max-width: 100%;
-//   height: auto;
-//   border-radius: 10px;
-// }
-
-
-// @media (max-width: 1024px) {
-//   .hero {
-//     padding: 2rem;
-//     gap: 1rem;
-//   }
-
-//   .hero-title {
-//     font-size: 2.5rem;
-//   }
-
-//   .hero-description {
-//     font-size: 0.95rem;
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   .hero {
-//     flex-direction: column;
-//     text-align: center;
-//     height: auto;
-//     padding: 2rem 1.5rem;
-//   }
-
-//   .hero-content {
-//     max-width: 100%;
-//     margin-bottom: 2rem;
-//   }
-
-//   .hero-title {
-//     font-size: 2rem;
-//   }
-
-//   .hero-button {
-//     width: 100%;
-//   }
-
-//   .hero-image {
-//     max-width: 100%;
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   .hero-title {
-//     font-size: 1.8rem;
-//     line-height: 1.4;
-//   }
-
-//   .hero-description {
-//     font-size: 0.9rem;
-//   }
-
-//   .hero-button {
-//     font-size: 0.9rem;
-//     padding: 0.65rem 1.5rem;
-//   }
-// }
-
-// Variables for hero styles
 $hero-bg-image: url("src/assets/images/hero.jpg.webp");
 $hero-bg-color: #000;
 $hero-highlight-color: #e76161;
 $hero-secondary-color: #444;
 $hero-button-hover: #444;
 
-// Mixin for media queries
+
 @mixin respond-to($breakpoint) {
   @if $breakpoint == tablet {
     @media (max-width: 1024px) {
@@ -211,7 +86,6 @@ $hero-button-hover: #444;
     }
   }
 
-  // Responsive Styles
   @include respond-to(tablet) {
     padding: 2rem;
     gap: 1rem;
