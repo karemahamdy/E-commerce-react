@@ -2,14 +2,10 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Header from './pages/Header';
-
 import './App.css';
 import CartPage from './pages/CartPage';
-
 import ProductDetailPage from './pages/ProductDetailPage';
-
 import Footer from './ui/Footer';
-import Hero from './pages/Hero';
 import { fetchProducts } from './redux/productSlice';
 import HomePage from './pages/HomePage';
 
@@ -24,7 +20,6 @@ function App() {
     <div className="container">
       <Header />
       <main className="flex-grow">
-      
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />

@@ -1,4 +1,6 @@
+import Button from "../components/Button";
 import "../styles/Hero.css";
+
 
 export default function Hero() {
   return (
@@ -12,7 +14,8 @@ export default function Hero() {
           A specialist label creating luxury essentials. Ethically crafted
           with an unwavering commitment to exceptional quality.
         </p>
-        <button className="hero-button">SHOP NOW</button>
+      
+        <Button className="hero-button">SHOP NOW</Button>
       </div>
 
     </section>

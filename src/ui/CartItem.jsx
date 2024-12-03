@@ -1,5 +1,4 @@
-
-
+import Button from "../components/Button";
 
 export default function CartItem({ item, onRemove, onIncrement, onDecrement }) {
   return (
@@ -10,26 +9,26 @@ export default function CartItem({ item, onRemove, onIncrement, onDecrement }) {
         <p className="cart-item-price">${item.price.toFixed(2)}</p>
       </div>
       <div className="cart-item-actions">
-        <button
+        <Button
+          className="btn btn-outline"
           onClick={() => onDecrement(item)}
           disabled={item.quantity <= 1}
-          className="btn btn-outline"
         >
           -
-        </button>
+        </Button>
         <span className="cart-item-quantity">{item.quantity}</span>
-        <button
-          onClick={() => onIncrement(item)}
+        <Button
           className="btn btn-outline"
+          onClick={() => onIncrement(item)}
         >
           +
-        </button>
-        <button
-          onClick={() => onRemove(item)}
+        </Button>
+        <Button
           className="btn btn-danger"
+          onClick={() => onRemove(item)}
         >
           Remove
-        </button>
+        </Button>
       </div>
     </div>
   );

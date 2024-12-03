@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 
 
 export default function CartSummary({ total }) {
@@ -19,7 +20,8 @@ export default function CartSummary({ total }) {
           <span>${total.toFixed(2)}</span>
         </div>
       </div>
-      <button className="btn btn-primary">Proceed to Checkout</button>
+      <Button className="btn btn-primary">Proceed to Checkout</Button>
+      
     </div>
   )
 }
