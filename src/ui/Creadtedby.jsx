@@ -1,5 +1,5 @@
 
-import "../styles/Footer.css";
+import "../styles/Footer.scss";
 
 export default function Creadtedby() {
   return (

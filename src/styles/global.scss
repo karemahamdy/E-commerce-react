@@ -38,7 +38,7 @@ body {
 // @import 'product-card';
 // @import 'product-details';
 // @import 'cart-page';
-// @import 'footer';
+@import './Footer.scss';
 
 .products-grid {
   display: grid;

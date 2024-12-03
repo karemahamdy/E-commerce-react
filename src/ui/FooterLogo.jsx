@@ -1,4 +1,4 @@
-import "../styles/Footer.css";
+import "../styles/Footer.scss";
 import footerLogo from "../assets/images/footer-logo.png.webp";
 
 export default function FooterLogo () {

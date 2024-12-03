@@ -1,0 +1,160 @@
+// .footer {
+//   background-color: #111;
+//   color: #fff;
+//   font-family: Arial, sans-serif;
+// }
+
+// .footer-container {
+//   padding: 4rem;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+//   gap: 2rem;
+// }
+
+// .footer-section {
+//   flex: 1;
+//   min-width: 200px;
+// }
+
+// .logo-section h2 {
+//   font-size: 1.5rem;
+//   color: #fff;
+//   margin-bottom: 1rem;
+// }
+
+// .footer-section h3 {
+//   font-size: 1.2rem;
+//   margin-bottom: 1rem;
+// }
+
+// .footer-section p {
+//   color: #c4c2c2;
+//   font-size: 0.9rem;
+//   line-height: 1.6;
+//   margin-top: 2rem;
+// }
+
+
+// .footer-section ul {
+//   list-style: none;
+//   padding: 0;
+//   cursor: pointer;
+//   color: #7e7777;
+// }
+
+// .footer-section ul li {
+//   margin-bottom: 0.5rem;
+//   font-size: 0.9rem;
+// }
+
+// .footer-section ul li:hover {
+//   color: var(--secondary-color);
+// }
+// .footer-bottom {
+//   text-align: center;
+//   margin-top: 2rem;
+//   font-size: 0.8rem;
+//   border-top: 1px solid #444;
+//   padding-top: 1rem;
+// }
+
+// .footer-bottom p {
+//   margin: 0;
+// }
+
+
+$footer-bg-color: #111;
+$footer-text-color: #fff;
+$footer-secondary-color: #7e7777;
+$footer-hover-color: var(--secondary-color);
+$footer-border-color: #444;
+$footer-light-text: #c4c2c2;
+
+.footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  font-family: Arial, sans-serif;
+
+  &-container {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &-section {
+    flex: 1;
+    min-width: 200px;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: $footer-light-text;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-top: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      cursor: pointer;
+      color: $footer-secondary-color;
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+
+        &:hover {
+          color: $footer-hover-color;
+        }
+      }
+    }
+  }
+
+  .logo-section {
+    h2 {
+      font-size: 1.5rem;
+      color: $footer-text-color;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    border-top: 1px solid $footer-border-color;
+    padding-top: 1rem;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// Mixin for responsiveness
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+
+@include respond-to(mobile) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
