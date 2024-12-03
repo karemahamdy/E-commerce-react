@@ -1,7 +1,7 @@
 
 import Logo from '../components/Logo';
 import Navbar from '../components/Nav';
-import '../styles/Header.css';
+import '../styles/Header.scss';
 import Cart from '../ui/Cart';
 
 function Header() {

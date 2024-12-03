@@ -6,6 +6,7 @@
 }
 
 .footer-container {
+  padding: 4rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

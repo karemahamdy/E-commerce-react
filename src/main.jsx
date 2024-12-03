@@ -6,7 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 import { store, persistor } from './redux/store';
-import './styles/global.css';
+import './styles/global.scss';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
